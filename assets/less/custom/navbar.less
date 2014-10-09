@@ -1,0 +1,51 @@
+.navbar-brand{
+    font-family: @base-font-family;
+    font-size: @font-size-navbrand;
+    color: @white;
+    line-height: @navbar-line-height;
+    padding-top: @navbar-title-padding-top;
+    padding-bottom: @navbar-padding-bottom;
+}
+
+.navbar-fixed-top {
+    min-height: @navbar-height;
+}
+
+.navbar-nav > li > a {
+   padding-top: @navbar-nav-padding-null;
+   padding-bottom: @navbar-nav-padding-null;
+   line-height: @navbar-height;
+ }
+
+@media (max-width: 767px) {
+  .navbar-nav > li > a {
+    line-height: @navbar-line-height;
+    padding-top: @navbar-padding-top;
+    padding-bottom: @navbar-padding-bottom;
+  }
+}
+
+.navbar-brand > a {
+  padding-top: @navbar-nav-padding-null;
+  padding-bottom: @navbar-nav-padding-null;
+  line-height: @navbar-height;
+}
+
+@media (max-width: 767px) {
+  .navbar-brand > a {
+    line-height: @navbar-line-height;
+    padding-top: @navbar-padding-top;
+    padding-bottom: @navbar-padding-bottom;
+  }
+}
+
+i[class^='icon-material'],i[class*=' icon-material']{
+    font-size: @font-size-navbrand-logo;
+    color: @white;
+}
+
+i[class^='icon-material']:hover + i[class*=' icon-material']{
+    color: @gray-dark;
+}
+
+

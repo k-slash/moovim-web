@@ -1,0 +1,50 @@
+// HTML
+// ----------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------
+
+.list-group .list-group-item .row-picture img {
+    display: block;
+    width: @poster-width;
+    height: @poster-height;
+}
+
+.list-group .list-group-separator:before {
+    content: "";
+    width: calc(100%);
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    float: right;
+    margin-bottom: @separator-poster-margin;
+    padding-top: @separator-poster-margin;
+}
+
+/*.list-group .list-group-item .row-content-poster {
+    display: inline-block;
+    min-height: @min-height;
+    width: calc(100%);
+}*/
+
+.list-group .list-group-item .row-content {
+    display: inline-block;
+    width: calc(100%);
+    min-height: 66px;
+}
+
+.list-group .list-group-item .row-content .action-secondary i {
+    font-size: 40px;
+    color: red;
+    cursor: pointer;
+    padding-right: 6px;
+}
+
+.list-group .list-group-item .row-content .action-third i {
+    font-size: 40px;
+    color: rgba(0,0,0,.25);
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+.list-group .list-group-item .row-content .action-third {
+    position: absolute;
+    right: 16px;
+    top: 66px;
+}

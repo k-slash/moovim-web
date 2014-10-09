@@ -1,0 +1,108 @@
+<div class="col-lg-12">
+
+
+        <form method="post" action="" class="form-horizontal" ng-submit="movie.search(filters)">
+            <div class="col-lg-12">
+                <h2>Upcoming</h2>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-4">
+                    <div class="bs-component">
+                        <div class="list-group" ng-repeat="movie in movie.results">
+                            <div class="list-group-item" >
+                                {{endif}}
+                                <div class="row-picture">
+                                    <img class="thumbnail" src="http://image.tmdb.org/t/p/w154{{movie.poster_path}}" alt="icon">
+                                </div>
+                                <div class="row-content">
+                                    <div class="action-secondary"><i class="icon-material-favorite"></i></div>
+                                    <div class="action-third"><i class="icon-material-visibility"></i></div>
+                                    <a href="./#/movie/:{{movie.id}}"><h4 class="list-group-item-heading">{{movie.title}}</h4></a>
+                                    <p class="list-group-item-text">{{movie.release_date}}</p>
+                                </div>
+                                <div class="list-group-separator"></div>
+                            </div>
+
+                            <!--<div class="list-group-item">
+                                <div class="row-action-primary">
+                                    <i class="icon-material-folder"></i>
+                                </div>
+                                <div class="row-content">
+                                    <div class="least-content">8m</div>
+                                    <h4 class="list-group-item-heading">Tile with a label</h4>
+                                    <p class="list-group-item-text">Maecenas sed diam eget risus varius blandit.</p>
+                                </div>
+                            </div>
+                            <div class="list-group-separator"></div>-->
+                        </div>
+                        <div id="source-button" class="btn btn-primary btn-xs withripple" style="display: none;">&lt; &gt;<div class="ripple-wrapper"></div></div></div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="bs-component">
+                        <div class="list-group">
+                            <div class="list-group-item" >
+
+
+                                <div class="row-picture">
+                                    <img class="thumbnail" src="http://image.tmdb.org/t/p/w154/xxe77USOk2tPnq7G4cL42gf1OxQ.jpg" alt="icon">
+                                </div>
+                                <div class="row-content">
+                                    <div class="action-secondary"><i class="icon-material-favorite"></i></div>
+                                    <div class="action-third"><i class="icon-material-visibility"></i></div>
+                                    <h4 class="list-group-item-heading">Tile with avatar</h4>
+                                    <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metusz</p>
+                                </div>
+                                <div class="list-group-separator"></div>
+
+                            </div>
+                        </div>
+                        <div id="source-button" class="btn btn-primary btn-xs withripple" style="display: none;">&lt; &gt;<div class="ripple-wrapper"></div></div></div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="bs-component">
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                <div class="row-picture">
+                                    <img class="thumbnail" src="http://image.tmdb.org/t/p/w154/xxe77USOk2tPnq7G4cL42gf1OxQ.jpg" alt="icon">
+                                </div>
+                                <div class="row-content">
+                                    <div class="action-secondary"><i class="icon-material-favorite"></i></div>
+                                    <div class="action-third"><i class="icon-material-visibility"></i></div>
+                                    <h4 class="list-group-item-heading">Tile with avatar</h4>
+                                    <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus</p>
+                                </div>
+                            </div>
+                            <div class="list-group-separator"></div>
+                            <div class="list-group-item">
+                                <div class="row-picture">
+                                    <img class="thumbnail" src="http://image.tmdb.org/t/p/w154/xxe77USOk2tPnq7G4cL42gf1OxQ.jpg" alt="icon">
+                                </div>
+                                <div class="row-content">
+                                    <div class="action-secondary"><i class="icon-material-favorite"></i></div>
+                                    <div class="action-third"><i class="icon-material-visibility"></i></div>
+                                    <h4 class="list-group-item-heading">Tile with avatar</h4>
+                                    <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus</p>
+                                </div>
+                            </div>
+                            <div class="list-group-separator"></div>
+                            <div class="list-group-item">
+                                <div class="row-action-primary checkbox">
+                                    <label><input type="checkbox" class="bs-material"><span class="check"></span></label>
+                                </div>
+                                <div class="row-content">
+                                    <h4 class="list-group-item-heading">Tile with a checkbox in it</h4>
+                                    <p class="list-group-item-text">Donec id elit non mi risus varius blandit.</p>
+                                </div>
+                            </div>
+                            <div class="list-group-separator"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+</div>

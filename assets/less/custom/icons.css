@@ -1,0 +1,12 @@
+.social,
+.glyphicons {
+  position: relative;
+  top: -1px;
+  max-height: 20px;
+  min-width: 16px;
+  line-height: 1;
+}
+.social.edit,
+.glyphicons.edit {
+  top: -3px;
+}

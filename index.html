@@ -1,0 +1,150 @@
+<!doctype html>
+<html ng-app="MoovIm">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noindex, nofollow">
+
+        <!-- Favicon -->
+        <link rel="icon" href="./assets/img/moovim/moovim.png">
+
+        <title ng-bind="project.title +' &middot; '+ page.title"></title>
+
+        <!-- // CSS -->
+        <!-- // ************************************************************************** -->
+
+        <!-- Theme -->
+        <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="bower_components/bootstrap-material-design/dist/css/material.min.css" rel="stylesheet">
+        <link href="bower_components/bootstrap-material-design/dist/css/ripples.min.css" rel="stylesheet">
+        <link href="//fezvrasta.github.io/snackbarjs/dist/snackbar.min.css" rel="stylesheet">
+        <link href="assets/css/main.min.css" rel="stylesheet">
+
+        <!-- Loading bar -->
+        <link href="node_modules/angular-loading-bar/build/loading-bar.min.css" rel="stylesheet">
+
+        <!-- // Javascript -->
+        <!-- // ************************************************************************** -->
+
+        <!-- jQuery -->
+        <script src="assets/libs/jquery/jquery.min.js"></script>
+
+        <!-- Plugins jQuery -->
+        <script src="assets/libs/jquery/plugins/bootstrap/bootstrap.min.js"></script>
+        <script src="assets/libs/jquery/plugins/gpopover/jquery.gpopover.min.js"></script>
+
+        <!-- AngularJS -->
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+        <script src="bower_components/angular-route/angular-route.min.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+        <script src="bower_components/angular-strap/dist/angular-strap.min.js"></script>
+        <script src="bower_components/angular-strap/dist/angular-strap.tpl.min.js"></script>
+        <script src="bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
+        <script src="bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
+
+        <!-- Lazy loading module -->
+        <script src="node_modules/oclazyload/dist/ocLazyLoad.min.js"></script>
+
+        <!-- Loading bar -->
+        <script src="node_modules/angular-loading-bar/build/loading-bar.min.js"></script>
+
+        <!-- Satellizer -->
+        <script src="node_modules/satellizer/satellizer.min.js"></script>
+
+        <!-- Angular Strap -->
+        <script src="assets/libs/angularjs/angular-strap.min.js"></script>
+        <script src="assets/libs/angularjs/angular-strap.tpl.min.js"></script>
+
+        <!-- App -->
+        <script src="app/app.js"></script>
+        <script src="app/config.js"></script>
+
+        <!-- Directives -->
+        <script src="app/directives/gpopover.directive.js"></script>
+
+        <!-- Modules -->
+        <script src="app/modules/error/error.js"></script>
+        <script src="app/modules/home/home.js"></script>
+        <script src="app/modules/user/user.js"></script>
+        <script src="app/modules/movie/movie.js"></script>
+
+        <!-- Services -->
+        <script src="app/services/user.service.js"></script>
+        <script src="app/services/movie.service.js"></script>
+    </head>
+
+    <body>
+
+        <div ng-show="isAuthenticated()">
+            <!-- Navbar -->
+            <header class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <div class="navbar-brand">
+                            <a href="#" class="title">
+                                M<i class="icon icon-material-voicemail"></i><i class="icon icon-material-keyboard-arrow-left"></i>Im
+                                <!--<span class="entypo-tape"></span><span class="entypo-left-open-mini"></span>-->
+                            </a>
+                        </div>
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar_nav">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <div id="navbar_nav" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+
+                            <li ng-class="{ active: page.name === 'movie' }">
+                                <a href="./#/movie">Movie</a>
+                            </li>
+
+                            <li ng-class="{ active: page.name === 'contact' }">
+                                <a href="./#/contact">Contact</a>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="#" id="app_launcher" gpopover="{ width: 280 }" data-popover="turbo_apps">
+                                    <i class="glyphicons show_thumbnails"></i>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown">
+                                    <img src="{{ user.picture }}" class="img-circle">
+                                    <span class="icon-bar"></span>
+                                    {{ user.first_name + ' ' + user.family_name }} <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="./#/sign-out">Sign out</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><!--/.navbar-collapse -->
+
+                </div>
+            </header>
+            <!--/Navbar -->
+
+
+        </div>
+
+        <section>
+            <div class="content">
+                <div class="container">
+                    <div class="row">
+
+                        <div ng-view></div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </body>
+</html>

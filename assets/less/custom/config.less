@@ -1,0 +1,276 @@
+// Typography
+// ----------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------
+
+    @base-font-family:          'Lato-Light', sans-serif;
+    @font-open-sans:            'Lato-Light', sans-serif;
+    @font-open-sans-semibold:   'Lato-Light', sans-serif;
+    @font-family-monospace:     'Lato-Light', monospace;
+    @font-family-base:          @font-open-sans;
+    @headings-font-family:      @font-family-base;
+    @line-height-base:          1.571428571428571; // 22/14
+
+    @text-color:                @gray-dark;
+
+    @link-color:                @primary;
+    @link-hover-color:          darken(@primary, 15%);
+
+    @font-size-navbrand:        2.5em;
+    @font-size-navbrand-logo:   25px;
+
+// Page layout
+// ----------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------
+
+    // Body background color
+    // ------------------------------------------------------------------------------------------------------
+    @body-bg:           @white;
+
+    // Container width
+    // ------------------------------------------------------------------------------------------------------
+    @container-lg:      1256px;
+
+// Custom colors
+// ----------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------
+
+    // Basics Bootstrap colors
+    // ------------------------------------------------------------------------------------------------------
+    @white:             #FFFFFF;
+    @white-smoke:       #F5F5F5;
+    @black:             #000000;
+
+    // @primary:           #11a2c5;
+    @primary:           #3498DB;
+    @success:           #18BC9C;
+    @danger:            #FF6C60;
+    @warning:           #F39C12;
+    @info:              #3498DB;
+
+    // BS3 overload
+    // ------------------------------------------------------------------------------------------------------
+    @brand-primary:     @primary;
+    @brand-success:     @success;
+    @brand-warning:     @warning;
+    @brand-danger:      @danger;
+    @brand-info:        @info;
+
+    // Greens
+    // ------------------------------------------------------------------------------------------------------
+    @green-appturbo:    rgb(57,181,74); // 39B54A
+    // @green:             @primary;
+    @green:             #65C383;
+
+    // Shades of green
+    @green-darker:      darken(@green, 35%);
+    @green-dark:        darken(@green, 15%);
+    @green-dark-less:   darken(@green, 5%);
+    @green-light-less:  lighten(@green, 5%);
+    @green-light:       lighten(@green, 15%);
+    @green-lighter:     lighten(@green, 35%);
+
+    // Google
+    // ------------------------------------------------------------------------------------------------------
+    @google:            #DF4A32;
+
+    // Grays
+    // ------------------------------------------------------------------------------------------------------
+    @gray:              lighten(@black, 33.5%); // #555
+
+    // Shades of grays
+    @gray-darker:       lighten(@black, 13.5%); // #222
+    @gray-dark:         lighten(@black, 20%);   // #333
+    @gray-dark-light:   lighten(@black, 25%);   // #404040
+    @gray-light-less:   lighten(@black, 46.5%); // #777
+    @gray-light-minus:  lighten(@black, 53.5%); // #888
+    @gray-light:        lighten(@black, 60%);   // #999
+    @gray-light-plus:   lighten(@black, 66.5%); // #AAA
+    @gray-lighter-bis:  #dcdcdc;
+    @gray-lighter:      lighten(@black, 93.5%); // #EEE
+    @gray-lighter-plus: #f0f0f0;
+
+    // Stars
+    // ------------------------------------------------------------------------------------------------------
+    @star-color:        lighten(@warning, 15%); // #f7ba5b
+
+// Navbar
+// ----------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------
+
+    // Default
+    // ------------------------------------------------------------------------------------------------------
+    @navbar-height:                         50px;
+    @navbar-line-height:                    20px;
+    @navbar-padding-top:                    10px;
+    @navbar-padding-bottom:                 10px;
+    @navbar-nav-padding-null:               0px;
+    @navbar-title-padding-top:              16px;
+
+// Footer
+// ----------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------
+
+    // Background
+    // ------------------------------------------------------------------------------------------------------
+    @footer-bg:                 @gray-dark-light;
+
+// Forms
+// ----------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------
+
+    // Inputs
+    // ------------------------------------------------------------------------------------------------------
+    @input-height-base:         43px;
+    @input-border:              @gray-lighter-plus;
+    @input-border-focus:        @primary;
+    @input-color-placeholder:   @gray-lighter;
+
+    // Parsley
+    // ------------------------------------------------------------------------------------------------------
+    @parsley-success-bg-color:  #DFF0D8;
+    @parsley-success-border:    @success;
+    @parsley-success-color:     @success;
+
+    @parsley-error-bg-color:    #F2DEDE;
+    @parsley-error-border:      @danger;
+    @parsley-error-color:       @danger;
+
+// Buttons
+// ----------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------
+
+    // Default
+    // ------------------------------------------------------------------------------------------------------
+    @btn-default-color:         @gray-light-less;
+    @btn-default-box-shadow:    @gray-lighter;
+    @btn-default-bg:            @gray-lighter-plus;
+
+    // Google
+    // ------------------------------------------------------------------------------------------------------
+    @btn-google-color:          @white;
+    @btn-google-bg:             @google;
+    @btn-google-border:         darken(@google, 8%);
+
+    // Primary
+    // ------------------------------------------------------------------------------------------------------
+    @btn-primary-bg:            @primary;
+
+    // Warning
+    // ------------------------------------------------------------------------------------------------------
+    @btn-warning-color:         @white;
+    @btn-warning-bg:            @warning;
+    @btn-warning-border:        darken(@btn-warning-bg, 5%);
+
+    // Black
+    // ------------------------------------------------------------------------------------------------------
+    @btn-black-color:           @white;
+    @btn-black-bg:              @gray-dark;
+    @btn-black-border:          darken(@btn-black-bg, 5%);
+
+// Components
+// ----------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------
+
+    // Padding
+    // ------------------------------------------------------------------------------------------------------
+    @padding-base-vertical:         8px;
+
+    // Dropdown
+    // ------------------------------------------------------------------------------------------------------
+    @dropdown-link-hover-bg:        @gray-lighter-plus;
+    @dropdown-menu-hover-border:    transparent;
+    @dropdown-caret-color:          @gray-lighter;
+
+    // Accordion
+    // ------------------------------------------------------------------------------------------------------
+    @accordion-border-color:        @gray-lighter;
+
+    // Jumbotron
+    // ------------------------------------------------------------------------------------------------------
+    @jumbotron-bg:                  @gray-lighter-plus;
+
+    // Modal
+    // ------------------------------------------------------------------------------------------------------
+    @modal-header-border-color:     @gray-lighter;
+    @modal-content-bg:              @white;
+    @modal-content-border-color:    @gray-lighter;
+    @modal-footer-bg:               @gray-lighter-plus;
+
+    // Panel
+    // ------------------------------------------------------------------------------------------------------
+    @panel-bg:                      @gray-lighter-plus;
+    @panel-default-border:          @gray-lighter;
+    @panel-border-radius:           6px;
+    @panel-default-heading-bg:      @primary;
+    @panel-footer-bg:               @gray-lighter;
+
+    @panel-warning-border:          @warning;
+    @panel-warning-heading-bg:      @warning;
+    @panel-warning-text:            @white;
+
+    // Forms
+    // ------------------------------------------------------------------------------------------------------
+    @legend-color:                  @primary;
+    @legend-border-color:           @primary;
+
+    // Tables
+    // ------------------------------------------------------------------------------------------------------
+    @table-cell-padding:            8px 25px;
+    @table-border-color:            @gray-lighter;
+    @table-bg-accent:               #F9FAFB;
+
+    // Tooltip
+    // ------------------------------------------------------------------------------------------------------
+    @tooltip-bg:                    @white;
+    @tooltip-color:                 @gray-dark;
+    @tooltip-arrow-color:           @primary;
+
+    // List-group
+    // ------------------------------------------------------------------------------------------------------
+    @list-group-bg:                 @gray-lighter-plus;
+    @list-group-active-bg:          @gray-lighter-plus;
+    @list-group-border:             @gray-lighter;
+    @list-group-hover-bg:           @gray-lighter-plus;
+    @list-group-hover-color:        @gray-light-less;
+    @list-group-active-color:       @gray-light-less;
+    @list-group-link-color:         @gray-light-less;
+
+    // Progressbar
+    // ------------------------------------------------------------------------------------------------------
+    @progress-bar-gray-bg:          @gray-light-plus;
+
+    // Popover
+    // ------------------------------------------------------------------------------------------------------
+    @zindex-popover:                1030;
+    @popover-arrow-outer-color:     @primary;
+
+    // Nav
+    // ------------------------------------------------------------------------------------------------------
+    @nav-link-hover-bg:             @gray-lighter-plus;
+    @nav-pills-active-link-hover-color: @gray-light-less;
+
+    // Alert
+    // ------------------------------------------------------------------------------------------------------
+    @state-success-text:             @white;
+    @state-success-bg:               @success;
+
+    @state-info-text:                @white;
+    @state-info-bg:                  @info;
+
+    @state-warning-text:             @white;
+    @state-warning-bg:               @warning;
+
+    @state-danger-text:              @white;
+    @state-danger-bg:                @danger;
+
+    // Close
+    // ------------------------------------------------------------------------------------------------------
+    @close-color:                    @white;
+
+    // Poster
+    // ------------------------------------------------------------------------------------------------------
+    @poster-width:                  154px;
+    @poster-height:                 231px;
+    @separator-poster-margin:       10px;
+    @min-height:                    66px;
+    @max-width:                     100%;

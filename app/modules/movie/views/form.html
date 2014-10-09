@@ -1,0 +1,239 @@
+<div class="col-lg-12">
+    <article class="panel panel-primary">
+
+        <form method="post" action="" class="form-horizontal" ng-submit="company.save(company)">
+
+            <div class="panel-heading">
+                <div class="box box-left"><i class="glyphicons building"></i></div>
+                <h3 ng-bind="page.title"></h3>
+            </div>
+
+            <div class="panel-body">
+
+                <fieldset>
+                    <legend>Account information</legend><br>
+
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Company name</label>
+                        <div class="col-lg-4">
+                            <input type="text" class="form-control" name="name" ng-model="company.name" required>
+                        </div>
+
+                        <label class="col-lg-2 control-label">Salesperson</label>
+                        <div class="col-lg-4">
+                            <select class="form-control" name="user" ng-model="company.user.id">
+                                <option value="1">Giosue</option>
+                                <option value="2" ng-selected="true">Giosue2</option>
+                                <option value="3">Giosue3</option>
+                                <option value="4">Giosue4</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Status</label>
+                        <div class="col-lg-4">
+                            <select class="form-control" name="status" ng-model="company.status.name" required>
+                                <option value="client">Client</option>
+                                <option value="off-target" ng-selected="true">Off-target</option>
+                            </select>
+                        </div>
+
+                        <label class="col-lg-2 control-label">Business sector</label>
+                        <div class="col-lg-4">
+                            <select class="form-control" name="sector" ng-model="company.sector.name" required>
+                                <option value="games">Games</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">In/Outbound</label>
+                        <div class="col-lg-4">
+                            <select class="form-control" name="source" ng-model="company.inbound" required>
+                                <option value="inbound">Inbound</option>
+                                <option value="outbound">Outbound</option>
+                            </select>
+                        </div>
+
+                        <label class="col-lg-2 control-label">Source</label>
+                        <div class="col-lg-4">
+                            <select class="form-control" name="source" ng-model="company.source" required>
+                                <option value="press">Press</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Currency</label>
+                        <div class="col-lg-4">
+                            <select class="form-control" name="source" ng-model="company.currency.name" required>
+                                <option value="eur">EUR</option>
+                                <option value="usd">USD</option>
+                            </select>
+                        </div>
+
+                        <label class="col-lg-2 control-label">VAT number</label>
+                        <div class="col-lg-4">
+                            <input type="text" class="form-control" name="vat_number" ng-model="company.vat_number">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Potential</label>
+                        <div class="col-lg-4">
+                            <input type="number" class="form-control" name="potential" ng-model="company.potential" min="1" max="5" placeholder="Optional">
+                        </div>
+
+                        <label class="col-lg-2 control-label"></label>
+                        <div class="col-lg-4">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="advanced_payment" value="1" ng-model="company.advanced_payment">
+                                    Advanced payment required
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>General information</legend><br>
+
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Phone number</label>
+                        <div class="col-lg-4">
+                            <input type="text" class="form-control" name="phone_number" ng-model="company.phone_number" placeholder="Optional">
+                        </div>
+
+                        <label class="col-lg-2 control-label">Fax number</label>
+                        <div class="col-lg-4">
+                            <input type="text" class="form-control" name="fax_number" ng-model="company.fax_number" placeholder="Optional">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Website</label>
+                        <div class="col-lg-4">
+                            <input type="url" class="form-control" name="website" ng-model="company.website" placeholder="Optional">
+                        </div>
+
+                        <label class="col-lg-2 control-label"></label>
+                        <div class="col-lg-4">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="case_study" value="1" ng-model="company.case_study">
+                                    Appear in case studies
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Coverage</label>
+                        <div class="col-lg-10">
+                            <div class="checkbox">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" name="coverage[]" value="fr" ng-model="company.coverage.fr"> FR
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" name="coverage[]" value="us" ng-model="company.coverage.us"> US
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Addresses</legend><br>
+
+                    <div class="form-group">
+                        <div class="col-lg-6 col-lg-offset-6">
+                            <button type="button" class="btn btn-xs btn-primary">
+                                <i class="glyphicons share"></i> <span>Copy</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Street</label>
+                        <div class="col-lg-4">
+                            <input type="text" class="form-control" name="street_address" ng-model="company.street_address">
+                        </div>
+
+                        <label class="col-lg-2 control-label">Billing street</label>
+                        <div class="col-lg-4">
+                            <input type="text" class="form-control" name="street_address" ng-model="company.street_address">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">ZIP</label>
+                        <div class="col-lg-4">
+                            <input type="text" class="form-control" name="zip" ng-model="company.zip">
+                        </div>
+
+                        <label class="col-lg-2 control-label">Billing ZIP</label>
+                        <div class="col-lg-4">
+                            <input type="text" class="form-control" name="zip" ng-model="company.zip">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">City</label>
+                        <div class="col-lg-4">
+                            <input type="text" class="form-control" name="city" ng-model="company.city">
+                        </div>
+
+                        <label class="col-lg-2 control-label">Billing City</label>
+                        <div class="col-lg-4">
+                            <input type="text" class="form-control" name="city" ng-model="company.city">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Country</label>
+                        <div class="col-lg-4">
+                            <select class="form-control" name="country_code" ng-model="company.country_code">
+                                <option value="us">USA</option>
+                                <option value="fr">France</option>
+                            </select>
+                        </div>
+
+                        <label class="col-lg-2 control-label">Billing Country</label>
+                        <div class="col-lg-4">
+                            <select class="form-control" name="country_code" ng-model="company.country_code">
+                                <option value="us">USA</option>
+                                <option value="fr">France</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+
+                <fieldset>
+                    <legend>Apps</legend><br>
+
+
+                </fieldset>
+            </div>
+
+            <div class="panel-footer">
+                <ul class="list-inline text-right">
+                    <li>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="glyphicons disk_save"></i> <span>Save</span>
+                        </button>
+                    </li>
+                </ul>
+
+                <div class="clearfix"></div>
+            </div>
+
+        </form>
+
+    </article>
+</div>

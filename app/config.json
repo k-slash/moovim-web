@@ -1,0 +1,20 @@
+{
+    "config": {
+        "project": {
+            "env": "dev",
+            "title": "MoovIm",
+            "url": "http://localhost/k-slash-web/",
+            "maintenance": false
+        },
+        "oauth": {
+            "client_id": "1018703288165-svrbq2c31l94oh8luiontj9bg3j1jn06.apps.googleusercontent.com",
+            "redirect_uri": "http://localhost/k-slash-web/"
+        },
+        "api": {
+            "endpoint": "http://localhost/k-slash-api/web/app_dev.php/"
+        },
+        "movie": {
+            "path_poster" : "http://image.tmdb.org/t/p/w154"
+        }
+    }
+}

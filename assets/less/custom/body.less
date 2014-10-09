@@ -1,0 +1,89 @@
+// HTML
+// ----------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------
+
+    @font-face {
+        font-family: 'Lato-Light';
+        src: url('../fonts/Lato/Lato-Light.ttf');
+    }
+
+    @font-face {
+        font-family: 'Lato-Regular';
+        src: url('../fonts/Lato/Lato-Regular.ttf');
+    }
+
+    html {
+        height: 100%;
+    }
+
+// Body
+// ----------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------
+
+    body {
+        font-family:        'Lato-Regular';
+        min-height:         100%;
+        position:           relative;
+        padding-bottom:     0;
+        background-color:   @white;
+        overflow-x:         hidden; /* avoid horizontal scrollbar */
+        color:              @gray-dark-light;
+
+        @media(max-width: @screen-md) {
+            padding-bottom: 0;
+        }
+
+        @media(max-width: @screen-xs) {
+            padding-bottom: 0;
+        }
+
+        > section {
+
+            padding-top:    115px;
+            padding-bottom: 0;
+
+            @media(max-width: @screen-xs) {
+                padding-top: 110px;
+            }
+
+        }
+
+        // List
+        // --------------------------------------------------------------------------------------------------
+        ul {
+            margin-bottom:  0;
+        }
+
+        // Link
+        // --------------------------------------------------------------------------------------------------
+        a {
+
+            color: @primary;
+            .transition(all);
+
+            &:hover {
+                color:              @gray-dark;
+                text-decoration:    none;
+            }
+
+        }
+
+        .title{
+            color: @white;
+        }
+
+    }
+
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+        font-family:        'Lato-Light';
+    }
+
+    h1, .h1, h2, .h2, h3, .h3 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* entypo */
+    [class*="entypo-"]:before {
+      font-family: 'entypo', sans-serif;
+    }
