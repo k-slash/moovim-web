@@ -19,30 +19,31 @@
         <link href="bower_components/bootstrap-material-design/dist/css/material.min.css" rel="stylesheet">
         <link href="bower_components/bootstrap-material-design/dist/css/ripples.min.css" rel="stylesheet">
         <link href="//fezvrasta.github.io/snackbarjs/dist/snackbar.min.css" rel="stylesheet">
-        <link href="assets/css/main.min.css" rel="stylesheet">
-
         <!-- Loading bar -->
         <link href="node_modules/angular-loading-bar/build/loading-bar.min.css" rel="stylesheet">
+        <link href="assets/css/main.min.css" rel="stylesheet">
+
 
         <!-- // Javascript -->
         <!-- // ************************************************************************** -->
 
         <!-- jQuery -->
-        <script src="assets/libs/jquery/jquery.min.js"></script>
+        <!--<script src="assets/libs/jquery/jquery.min.js"></script>-->
 
         <!-- Plugins jQuery -->
-        <script src="assets/libs/jquery/plugins/bootstrap/bootstrap.min.js"></script>
-        <script src="assets/libs/jquery/plugins/gpopover/jquery.gpopover.min.js"></script>
+        <!--<script src="assets/libs/jquery/plugins/bootstrap/bootstrap.min.js"></script>-->
+        <!--<script src="assets/libs/jquery/plugins/gpopover/jquery.gpopover.min.js"></script>-->
 
         <!-- AngularJS -->
         <script src="bower_components/angular/angular.min.js"></script>
         <script src="bower_components/angular-resource/angular-resource.min.js"></script>
         <script src="bower_components/angular-route/angular-route.min.js"></script>
         <script src="bower_components/angular-animate/angular-animate.min.js"></script>
-        <script src="bower_components/angular-strap/dist/angular-strap.min.js"></script>
-        <script src="bower_components/angular-strap/dist/angular-strap.tpl.min.js"></script>
-        <script src="bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
-        <script src="bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
+        <script src="bower_components/angular-youtube-mb/src/angular-youtube-embed.js"></script>
+
+        <!--<script src="bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
+        <script src="bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>-->
+        <!--<script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>-->
 
         <!-- Lazy loading module -->
         <script src="node_modules/oclazyload/dist/ocLazyLoad.min.js"></script>
@@ -54,15 +55,17 @@
         <script src="node_modules/satellizer/satellizer.min.js"></script>
 
         <!-- Angular Strap -->
-        <script src="assets/libs/angularjs/angular-strap.min.js"></script>
-        <script src="assets/libs/angularjs/angular-strap.tpl.min.js"></script>
+
+        <script src="bower_components/angular-strap/dist/angular-strap.min.js"></script>
+        <script src="bower_components/angular-strap/dist/angular-strap.tpl.min.js"></script>
+
 
         <!-- App -->
         <script src="app/app.js"></script>
         <script src="app/config.js"></script>
 
         <!-- Directives -->
-        <script src="app/directives/gpopover.directive.js"></script>
+        <!--<script src="app/directives/youtube.directive.js"></script>-->
 
         <!-- Modules -->
         <script src="app/modules/error/error.js"></script>
@@ -97,7 +100,6 @@
 
                     <div id="navbar_nav" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-
                             <li ng-class="{ active: page.name === 'movie' }">
                                 <a href="./#/movie">Movie</a>
                             </li>
@@ -107,11 +109,6 @@
                             </li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                <a href="#" id="app_launcher" gpopover="{ width: 280 }" data-popover="turbo_apps">
-                                    <i class="glyphicons show_thumbnails"></i>
-                                </a>
-                            </li>
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown">
                                     <img src="{{ user.picture }}" class="img-circle">
@@ -138,7 +135,6 @@
             <div class="content">
                 <div class="container">
                     <div class="row">
-
                         <div ng-view></div>
 
                     </div>

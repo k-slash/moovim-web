@@ -1,24 +1,35 @@
 <div class="col-lg-12">
-    <article class="panel panel-primary">
+    <div class="well bs-component">
+        <div id="wrap">
+            <div class="big_col">
+                <div class="big_img">
+                    <img class="backdrop" src="http://image.tmdb.org/t/p/w1280{{movie.backdrop_path}}" alt="">
+                </div>
+            </div>
+            <div class="medium_col visible-lg-block">
+                <div class="medium_img">
+                    <img class="backdrop visible-lg-block" src="http://image.tmdb.org/t/p/w1280{{movie.backdrops[1].file_path}}" alt="">
+                    <img class="backdrop visible-lg-block" src="http://image.tmdb.org/t/p/w1280{{movie.backdrops[2].file_path}}" alt="">
+                </div>
+            </div>
 
-        <div class="panel-heading">
-            <div class="box box-left"><i class="glyphicons building"></i></div>
-            <h3 ng-bind="page.title"></h3>
-            <div>
-                <a href="./#/company/edit/1" class="box box-right bg-warning" bs-tooltip data-container="body" data-title="Edit">
-                    <i class="glyphicons edit"></i>
-                </a>
+            <div class="title_detail">
+                <p class="vertical_align">{{movie.title}}</p>
             </div>
         </div>
-
-        <div class="panel-body">
-
-            <fieldset>
-                <legend>Account information</legend><br>
-
-            </fieldset>
-
+        <div class="container-blank">
+            <div class="page-header">
+                <h1>Info</h1>
+            </div>
+            Overview: {{movie.overview}} <br/>
+            Genre: <span ng-repeat="genre in movie.genres" class="label label-primary">{{genre.name}}</span> <br/>
+            Home page: <a href="{{movie.homepage}}"> {{movie.homepage}} {{movie.results[0].key}}</a> <br/>
+            <!--<div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/v/{{movie.results[0].key}}"></iframe>
+            </div>-->
+            {{movie.results[0].key}}
+            <youtube-video video-id="theBestVideo"></youtube-video>
         </div>
 
-    </article>
+
 </div>

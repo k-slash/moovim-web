@@ -1,4 +1,4 @@
-app.movie = angular.module('MoovIm.Movie', ['ngRoute', 'oc.lazyLoad', 'MoovIm.Config']);
+app.movie = angular.module('MoovIm.Movie', ['ngRoute', 'oc.lazyLoad', 'MoovIm.Config', 'mgcrea.ngStrap']);
 
 app.movie.config(['$routeProvider', '$authProvider', 'config', function ($routeProvider, $authProvider, config) {
 
@@ -84,6 +84,15 @@ app.movie.config(['$routeProvider', '$authProvider', 'config', function ($routeP
                 require_auth: true
             },
             resolve: {
+                /*movieDetail : ['MovieService', '$route', function(MovieService, $route){
+                    alert($route.current.params.id);
+                    MovieService.getMovie($route.current.params.id).then(function (request) {
+                        return request.data;
+                        //console.log(request.data);
+                    }, function(msg) {
+                        console.log(msg);
+                    });
+                }],*/
                 lazy: ['$ocLazyLoad', function($ocLazyLoad) {
                     return $ocLazyLoad.load([{
                         name: 'MoovIm.Movie',

@@ -79,11 +79,120 @@
     }
 
     h1, .h1, h2, .h2, h3, .h3 {
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top:     20px;
+        margin-bottom:  20px;
     }
 
     /* entypo */
     [class*="entypo-"]:before {
       font-family: 'entypo', sans-serif;
     }
+
+    .container .well, .container-fluid .well, body .well {
+        padding: 0px;
+    }
+
+
+    #wrap {
+        width:100%;
+        //height:394px;
+
+        @media(max-width: @screen-md) {
+            width:  100%;
+            height: auto;
+        }
+    }
+
+    .big_col, .medium_col, .small_col{
+        height:         394px;
+        float:          left;
+    }
+
+    .backdrop {
+        display:        block;
+        margin:         0;
+        padding:        0;
+        border:         none;
+        float:          left;
+    }
+    .big_col {
+        width:          700px;
+
+        @media(max-width: 1200px) {
+            width:      100%;
+            height:     auto;
+        }
+    }
+    .medium_col{
+        width:          440px;
+
+        @media(max-width: @screen-md) {
+            display:    none;
+        }
+    }
+    .small_col{
+        width:          200px;
+    }
+    .big_img img {
+        width:          700px;
+        height:         394px;
+
+        @media(max-width: 1200px) {
+            width:      100%;
+            height:     auto;
+        }
+    }
+    .medium_img img {
+        width:          440px;
+        height:         247px;
+    }
+    .small_img img {
+        width:          200px;
+        height:         112px;
+    }
+
+    .title_detail {
+        font-family:        'Lato-Light';
+        display:            table;
+        width:              700px;
+        min-height:         100px;
+        background-color:   greenyellow;
+        font-size:          32px;
+        padding-left:       10px;
+        padding-right:      10px;
+
+
+        @media(max-width: 1200px) {
+            width:          100%;
+            height:         100px;
+        }
+    }
+
+    .vertical_align {
+        display:            table-cell;
+        vertical-align:     middle;
+    }
+
+    .container-blank{
+        padding: 20px;
+    }
+
+
+    // Change loading bar color
+    // --------------------------------------------------------------------------------------------------
+
+    #loading-bar .bar {
+        background: @loading-bar;
+    }
+
+    /* Fancy blur effect */
+    #loading-bar .peg {
+        -moz-box-shadow: @loading-bar 1px 0 6px 1px;
+        -ms-box-shadow: @loading-bar 1px 0 6px 1px;
+        -webkit-box-shadow: @loading-bar 1px 0 6px 1px;
+    }
+
+    #loading-bar-spinner .spinner-icon {
+        border:  solid 2px transparent;
+    }
+

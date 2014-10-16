@@ -6,14 +6,17 @@ app.main = angular.module('MoovIm', [
     'oc.lazyLoad',
     'satellizer',
     'angular-loading-bar',
-    'mgcrea.ngStrap',
     'ngAnimate',
+    'mgcrea.ngStrap',
+    'youtube-embed',
+
+
 
     // Modules
     'MoovIm.Home',
     'MoovIm.Error',
     'MoovIm.User',
-    'MoovIm.Movie'
+    'MoovIm.Movie',
 ]);
 
 // Config
@@ -25,7 +28,7 @@ app.main.config(['$routeProvider', 'cfpLoadingBarProvider', '$alertProvider', fu
     });
 
     // Loading bar configuration
-    cfpLoadingBarProvider.latencyThreshold = 0;
+    cfpLoadingBarProvider.latencyThreshold = 500;
     cfpLoadingBarProvider.includeSpinner = false;
 
     // Alert configuration
