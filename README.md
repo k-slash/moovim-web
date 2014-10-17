@@ -52,3 +52,8 @@ Gulp is a streaming build system. It helps you to do repetitive tasks such as: m
 9. Satellizer:                  npm install satellizer
 10. Oclazyload:                 npm install oclazyload
 11. Angular loading bar:        npm install angular-loading-bar
+
+
+### Authentication Google OAuth 2
+
+Edit file app/config.json and paste client_id and redirect_uri of your google api
