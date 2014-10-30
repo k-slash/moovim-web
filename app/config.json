@@ -7,7 +7,7 @@
             "maintenance": false
         },
         "oauth": {
-            "client_id": "156876214982-l83kruqb9itgi2pr5f89nvdd3ednv2jo.apps.googleusercontent.com",
+            "client_id": "1018703288165-svrbq2c31l94oh8luiontj9bg3j1jn06.apps.googleusercontent.com",
             "redirect_uri": "http://localhost/k-slash-web/"
         },
         "api": {

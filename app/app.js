@@ -8,7 +8,6 @@ app.main = angular.module('MoovIm', [
     'angular-loading-bar',
     'ngAnimate',
     'mgcrea.ngStrap',
-    'youtube-embed',
 
 
 
